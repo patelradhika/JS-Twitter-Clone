@@ -6,6 +6,7 @@
     <title>Twitter Clone</title>
 
     <script src="https://kit.fontawesome.com/3b6efc1dc2.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
@@ -21,78 +22,13 @@
         </div>
         <div class="tweets-container">
             <div class="tweet-search-container">
-                <input type="text" id="search-input" placeholder="Search Twitter"/>
-                <i class="fas fa-search fa-2x fa-flip-horizontal"></i>
+                <input type="text" id="search-input" placeholder="Search Twitter" onkeyup="onEnter(event)"/>
+                <i class="fas fa-search fa-2x fa-flip-horizontal" onclick="searchTweets()"></i>
             </div>
             <div class="tweets-list-container">
-                <div class="individual-tweet">
-                    <div class="tweet-user-container">
-                        <div class="tweet-user-profile"></div>
-                        <div class="tweet-user-info">
-                            <div class="tweet-user-name">Radhika Patel</div>
-                            <div class="tweet-user-handle">@radz</div>
-                        </div>
-                    </div>
-                    <div class="tweet-media-container">
-
-                    </div>
-                    <div class="tweet-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                    <div class="tweet-date">
-                        20 minutes ago
-                    </div>
-                </div>
-                <div class="individual-tweet">
-                    <div class="tweet-user-container">
-                        <div class="tweet-user-profile"></div>
-                        <div class="tweet-user-info">
-                            <div class="tweet-user-name">Radhika Patel</div>
-                            <div class="tweet-user-handle">@radz</div>
-                        </div>
-                    </div>
-                    <div class="tweet-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie scelerisque erat, at venenatis massa. 
-                    </div>
-                    <div class="tweet-date">
-                        20 minutes ago
-                    </div>
-                </div>
-                <div class="individual-tweet">
-                    <div class="tweet-user-container">
-                        <div class="tweet-user-profile"></div>
-                        <div class="tweet-user-info">
-                            <div class="tweet-user-name">Radhika Patel</div>
-                            <div class="tweet-user-handle">@radz</div>
-                        </div>
-                    </div>
-                    <div class="tweet-media-container">
-
-                    </div>
-                    <div class="tweet-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie scelerisque erat, at venenatis massa.
-                    </div>
-                    <div class="tweet-date">
-                        20 minutes ago
-                    </div>
-                </div>
-                <div class="individual-tweet">
-                    <div class="tweet-user-container">
-                        <div class="tweet-user-profile"></div>
-                        <div class="tweet-user-info">
-                            <div class="tweet-user-name">Radhika Patel</div>
-                            <div class="tweet-user-handle">@radz</div>
-                        </div>
-                    </div>
-                    <div class="tweet-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
-                    <div class="tweet-date">
-                        20 minutes ago
-                    </div>
-                </div>
+                <!-- Tweets go here -->
             </div>
-            <div class="next-page">
+            <div id="next-page" onclick="getNextPage()">
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>
@@ -101,10 +37,10 @@
                 <div class="trending-list">
                     <div>Trends for you</div>
                     <ul>
-                        <li>#Coding</li>
-                        <li>#Python</li>
-                        <li>#JavaScript</li>
-                        <li>#Tesla</li>
+                        <li onclick="trendSearch(this.innerText)">#Coding</li>
+                        <li onclick="trendSearch(this.innerText)">#Python</li>
+                        <li onclick="trendSearch(this.innerText)">#JavaScript</li>
+                        <li onclick="trendSearch(this.innerText)">#Tesla</li>
                     </ul>
                 </div>
             </div>

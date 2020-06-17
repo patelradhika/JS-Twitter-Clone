@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0F0F11;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+}
+
+.navigation {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #1C1C1C;
+    position: fixed;
+}
+
+.twitter-icon {
+    color: white;
+    margin-top: 40px;
+}
+
+.home-icon {
+    color: #00ADFF;
+    margin-top: 30px;
+    width: 100%;
+    height: 75px;
+    border-right: 5px solid #00ADFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon {
+    margin-top: 30px;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #979797;
+    border-radius: 50%;
+    background-image: url(https://lh3.googleusercontent.com/dPYxFxsKJxOhqd5No5YDmH-PE9a9ypOsFwCsFtEThIHnq1T-JuaPsid2Mdms4Wtzo9Vcz1qjPWfbP4zL7kp6EsDrWxlQSN41k1h7XpTOImbIWs34K1MFH89UPYCrxdqbVugaCEYvePR15-wIus9vu0ic8Cu-5_398gF4WnI-PnWf8zqWWWygaf61FROdDBZOzqbJY0i0GilN8eWvIWgPGyxz7zJvgbqKsDM8gM5r3bOEv2Tf3m0_svJr4C7oEzvvC8cqI_0Jl881lTrbWHaKNsPOVVd4xil6Kjrm5FYgot08gXyV6-cUJsw5DaUE8XC4lMxzp3wydv-QIcoqML2m_2SKVoTlbVAFTT1Wa9kNxaz3LaFPtyBzP9OEZoB2XU9MlN9aspaNdhP_hA6Fj168dAmm2KgQJlBzGjTSuoIYoMVagluLBzsAFFgWF4e-YVAmGRZp7K7yMemneQh6K9TI7AxeIollItgWhGZQw8FobySLQapWt93SuXISWBE1UIP4xS_fZFXkhfgKpCaWapuKiUBsGN5T65ro-2VDuiQ67tR-uWby3okxkP0twGHK_vu67tNDHa838WN5v2JZVK3qUGY-rZBbVQoNBVJAUfKoWHqcicFWzVhGtl7Rn-ZLEO9HH9Mu_WteGW-oNklaMf1-II6aPtZmUEFsPKBehAJreuzMh7gpDZrZ1V516Fb6rQ=w960-h1280-no?authuser=0);
+    background-size: cover;
+    background-position: center;
+}
+
+.tweets-container {
+    flex-grow: 1;
+    margin-top: 40px;
+    margin-left: 150px;
+    margin-right: 450px;
+}
+
+.tweet-search-container {
+    border-bottom: 1px solid #979797;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.tweet-search-container input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    padding-bottom: 8px;
+    font-size: 36px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+.tweet-search-container input:focus {
+    outline: none;
+}
+
+.tweets-container i {
+    color: white;
+}
+
+.tweets-list-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.individual-tweet {
+    margin-top: 30px;
+    border: 1px solid #1C1C1C;
+    border-radius: 10px;
+}
+
+.tweet-user-container {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    display: flex;
+}
+
+.tweet-user-profile {
+    border: 1px solid #979797;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(https://lh3.googleusercontent.com/dPYxFxsKJxOhqd5No5YDmH-PE9a9ypOsFwCsFtEThIHnq1T-JuaPsid2Mdms4Wtzo9Vcz1qjPWfbP4zL7kp6EsDrWxlQSN41k1h7XpTOImbIWs34K1MFH89UPYCrxdqbVugaCEYvePR15-wIus9vu0ic8Cu-5_398gF4WnI-PnWf8zqWWWygaf61FROdDBZOzqbJY0i0GilN8eWvIWgPGyxz7zJvgbqKsDM8gM5r3bOEv2Tf3m0_svJr4C7oEzvvC8cqI_0Jl881lTrbWHaKNsPOVVd4xil6Kjrm5FYgot08gXyV6-cUJsw5DaUE8XC4lMxzp3wydv-QIcoqML2m_2SKVoTlbVAFTT1Wa9kNxaz3LaFPtyBzP9OEZoB2XU9MlN9aspaNdhP_hA6Fj168dAmm2KgQJlBzGjTSuoIYoMVagluLBzsAFFgWF4e-YVAmGRZp7K7yMemneQh6K9TI7AxeIollItgWhGZQw8FobySLQapWt93SuXISWBE1UIP4xS_fZFXkhfgKpCaWapuKiUBsGN5T65ro-2VDuiQ67tR-uWby3okxkP0twGHK_vu67tNDHa838WN5v2JZVK3qUGY-rZBbVQoNBVJAUfKoWHqcicFWzVhGtl7Rn-ZLEO9HH9Mu_WteGW-oNklaMf1-II6aPtZmUEFsPKBehAJreuzMh7gpDZrZ1V516Fb6rQ=w960-h1280-no?authuser=0);
+    background-size: cover;
+    background-position: center;
+}
+
+.tweet-user-info {
+    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.tweet-user-name {
+    font-size: 16px;
+}
+
+.tweet-user-handle {
+    font-size: 12px;
+}
+
+.tweet-media-container {
+    height: 240px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    border: 1px solid #1C1C1C;
+    border-radius: 10px;
+    background-image: url(https://lh3.googleusercontent.com/dPYxFxsKJxOhqd5No5YDmH-PE9a9ypOsFwCsFtEThIHnq1T-JuaPsid2Mdms4Wtzo9Vcz1qjPWfbP4zL7kp6EsDrWxlQSN41k1h7XpTOImbIWs34K1MFH89UPYCrxdqbVugaCEYvePR15-wIus9vu0ic8Cu-5_398gF4WnI-PnWf8zqWWWygaf61FROdDBZOzqbJY0i0GilN8eWvIWgPGyxz7zJvgbqKsDM8gM5r3bOEv2Tf3m0_svJr4C7oEzvvC8cqI_0Jl881lTrbWHaKNsPOVVd4xil6Kjrm5FYgot08gXyV6-cUJsw5DaUE8XC4lMxzp3wydv-QIcoqML2m_2SKVoTlbVAFTT1Wa9kNxaz3LaFPtyBzP9OEZoB2XU9MlN9aspaNdhP_hA6Fj168dAmm2KgQJlBzGjTSuoIYoMVagluLBzsAFFgWF4e-YVAmGRZp7K7yMemneQh6K9TI7AxeIollItgWhGZQw8FobySLQapWt93SuXISWBE1UIP4xS_fZFXkhfgKpCaWapuKiUBsGN5T65ro-2VDuiQ67tR-uWby3okxkP0twGHK_vu67tNDHa838WN5v2JZVK3qUGY-rZBbVQoNBVJAUfKoWHqcicFWzVhGtl7Rn-ZLEO9HH9Mu_WteGW-oNklaMf1-II6aPtZmUEFsPKBehAJreuzMh7gpDZrZ1V516Fb6rQ=w960-h1280-no?authuser=0);
+    background-size: cover;
+    background-position: center;
+}
+
+.tweet-text {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.74);
+    font-size: 16px;
+}
+
+.tweet-date {
+    margin: 8px 16px;
+    color: #47525D;
+    font-size: 12px;
+}
+
+.next-page {
+    border: 1px solid #1C1C1C;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    padding: 8px;
+    text-align: center;
+}
+
+.next-page i {
+    color: #47525D;
+}
+
+.trending-container {
+    margin-top: 40px;
+}
+
+.trending-background {
+    background-color: white;
+    border: 1px solid #979797;
+    border-radius: 40px;
+    width: 350px;
+    height: 600px;
+    margin-left: 10px;
+    position: fixed;
+    right: 80px;
+    left: 960px;
+}
+
+.trending-list {
+    background-color: #F2F2F2;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 50%;
+}
+
+.trending-list div {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+    color: #848586;
+    font-size: 20px;
+}
+
+.trending-list ul {
+    list-style-type: none;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.trending-list ul li {
+    color: #A5A5A6;
+    border-top: 1px solid #D8D8D8;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
